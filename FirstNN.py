@@ -62,9 +62,11 @@ partialYTrain = yTrain[10000:]
 #Returns history object with tons of data
 history = model.fit(partialXTrain,
                     partialYTrain,
-                    epochs=20,
+                    epochs=4,
                     batch_size=512,
                     validation_data=(xVal, yVal))
+
+
 
 historyDict = history.history
 lossValues = historyDict['loss']
@@ -81,7 +83,21 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 
-plt.show
+plt.show()
+
+plt.clf()
+
+#Plots the validation and training accuracy
+acc = historyDict['acc']
+val_acc = historyDict['val_acc']
+plt.plot(epochs, acc, 'bo', label='Training acc')
+plt.plot(epochs, val_acc, 'b', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+
+plt.show()
 
 """
 network = models.sequential()
