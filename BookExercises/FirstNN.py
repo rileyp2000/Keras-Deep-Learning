@@ -39,14 +39,14 @@ model = models.Sequential()
 #relu activation == relu(dot(W, input) + b)
 #                   relu = recrified linear unit, zeroes out negatives
 #compute how likely is to be positive
-model.add(layers.Dense(16, activation='relu', input_shape=(10000,)))
-model.add(layers.Dense(16, activation='relu'))
+model.add(layers.Dense(8, activation='relu', input_shape=(10000,)))
+model.add(layers.Dense(8, activation='relu'))
 #final output layer, prod result between 0 and 1
 model.add(layers.Dense(1, activation='sigmoid'))
 
 #Configure the model with various functions, montiors accuracy
 model.compile(optimizer='rmsprop',
-              loss='binary_crossentropy',
+              loss='mse',
               metrics=['accuracy'])
 
 #To monitor accuracy during training, create validation set of 10,000 samples from training data
@@ -62,7 +62,7 @@ partialYTrain = yTrain[10000:]
 #Returns history object with tons of data
 history = model.fit(partialXTrain,
                     partialYTrain,
-                    epochs=4,
+                    epochs=10,
                     batch_size=512,
                     validation_data=(xVal, yVal))
 
@@ -78,7 +78,7 @@ epochs = range(1, len(lossValues) + 1)
 plt.plot(epochs, lossValues, 'bo', label='Training loss')
 #plots validation loss with solid blue line
 plt.plot(epochs, valLossValues, 'b', label='Validation loss')
-plt.title('Trainiing and Validation loss')
+plt.title('Training and Validation loss')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
