@@ -1,3 +1,6 @@
+#Patrick Riley 11/15/18
+#Basic Classification problem
+
 from keras.datasets import imdb
 from keras import models
 from keras import layers

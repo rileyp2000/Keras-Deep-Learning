@@ -1,5 +1,6 @@
+#Patrick Riley 11/19/18
+#Classification problem with multiple outputs
 from keras.datasets import reuters
-
 from keras import models
 from keras import layers
 from keras.utils.np_utils import to_categorical
@@ -35,9 +36,9 @@ oneHotTestLabels = toOneHot(testLabels)
 oneHotTrainLabels = to_categorical(trainLabels)
 oneHotTestLabels = to_categorical(testLabels)
 
-
+model = models.Sequential()
 #Set up network
-model.add(layers.Dense(64, activation='relu', input_shape=(10000,)))
+model.add(layers.Dense(128, activation='relu', input_shape=(10000,)))
 model.add(layers.Dense(64, activation='relu'))
 model.add(layers.Dense(46, activation='softmax'))
 
@@ -52,8 +53,8 @@ xVal = xTrain[:1000]
 #last 10k
 partialXTrain = xTrain[1000:]
 
-yVal = yTrain[:1000]
-partialYTrain = yTrain[1000:]
+yVal = oneHotTrainLabels[:1000]
+partialYTrain = oneHotTrainLabels[1000:]
 
 #Trains the model for 20 iterations over all the samples in batchs of 512
 #Returns history object with tons of data
