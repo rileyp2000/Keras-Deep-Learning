@@ -36,6 +36,6 @@ model.add(layers.Dense(10, activation='softmax'))
 model.compile(optimizer='rmsprop',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
-model.fit(iTrain, lTrain, epochs=5, batch_size=64)
+model.fit(iTrain, lTrain, epochs=7, batch_size=64)
 
 tLoss, tAcc = model.evaluate(iTest, lTest)
