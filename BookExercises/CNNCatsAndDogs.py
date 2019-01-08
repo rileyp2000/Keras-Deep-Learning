@@ -1,8 +1,9 @@
-import os, shutil
+import os
 from keras import models
 from keras import layers
 from keras import optimizers
-
+from keras.preprocessing.image import ImageDataGenerator
+import matplotlib.pyplot as plt
 
 ogDatasetPath = 'C:\\Users\\PRLAX\\git\\ML-Python-Work\\BookExercises\\Data\\train'
 
@@ -74,6 +75,28 @@ for fname in fnames:
 
 
 #processing the image into usable tensors
+trainDataGen = ImageDataGenerator(
+    rescale=1./255,
+    rotation_range=40,
+    width_shift_range=.2,
+    height_shift_range=.2,
+    shear_range=.2,
+    zoom_range=.2,
+    horizontal_flip=True)
+testDataGen = ImageDataGenerator(rescale=1./255)
+
+trainGenerator = trainDataGen.flow_from_directory(
+    trainDir,
+    target_size=(150, 150),
+    batch_size=32,
+    class_mode='binary')
+
+validationGenerator = testDataGen.flow_from_directory(
+    validationDir,
+    target_size=(150,150),
+    batch_size=32,
+    class_mode='binary')
+
 
 
 
@@ -91,6 +114,7 @@ model.add(layers.MaxPooling2D((2,2)))
 #Adds a classifier of densely connected networks that uses vectors (similar to earlier projects)
 #first must flatten output of last 3d layer
 model.add(layers.Flatten())
+model.add(layers.Dropout(.5))
 model.add(layers.Dense(512, activation='relu'))
 model.add(layers.Dense(1, activation='sigmoid'))
 
@@ -98,3 +122,45 @@ model.add(layers.Dense(1, activation='sigmoid'))
 model.compile(optimizer=optimizers.RMSprop(lr=1e-4),
               loss='binary_crossentropy',
               metrics=['acc'])
+
+#Combines the batch generator with the compiled model
+history = model.fit_generator(
+    trainGenerator,
+    steps_per_epoch=100,
+    epochs=100,
+    validation_data=validationGenerator,
+    validation_steps=50)
+
+model.save('catsAndDogsSmall1.h5')
+
+historyDict = history.history
+lossValues = historyDict['loss']
+valLossValues = historyDict['val_loss']
+
+epochs = range(1, len(lossValues) + 1)
+
+#plots training loss with blue dots
+plt.plot(epochs, lossValues, 'bo', label='Training loss')
+#plots validation loss with solid blue line
+plt.plot(epochs, valLossValues, 'b', label='Validation loss')
+plt.title('Training and Validation loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+
+plt.show()
+
+plt.clf()
+
+#Plots the validation and training accuracy
+acc = historyDict['acc']
+val_acc = historyDict['val_acc']
+
+plt.plot(epochs, acc, 'bo', label='Training acc')
+plt.plot(epochs, val_acc, 'b', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+
+plt.show()
