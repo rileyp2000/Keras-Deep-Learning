@@ -5,6 +5,9 @@ from keras import optimizers
 from keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 
+import tensorflow as tf
+sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+
 ogDatasetPath = 'C:\\Users\\PRLAX\\git\\ML-Python-Work\\BookExercises\\Data\\train'
 
 baseDir = 'C:\\Users\\PRLAX\\git\\ML-Python-Work\\BookExercises\\Data\\train\\Cat-Dog-Small'
