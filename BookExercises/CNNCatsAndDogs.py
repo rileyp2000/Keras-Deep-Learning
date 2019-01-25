@@ -129,7 +129,7 @@ model.compile(optimizer=optimizers.RMSprop(lr=1e-4),
 #Combines the batch generator with the compiled model
 history = model.fit_generator(
     trainGenerator,
-    steps_per_epoch=100,
+    steps_per_epoch=70,
     epochs=100,
     validation_data=validationGenerator,
     validation_steps=50)
