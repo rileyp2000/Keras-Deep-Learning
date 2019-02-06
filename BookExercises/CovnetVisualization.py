@@ -1,3 +1,4 @@
+#This file creates a visual interpretation of the activations of a covnet on a sample image
 from keras.preprocessing import image
 from keras import models
 from keras.models import load_model

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89db754d-a053-4c82-aa17-c37edc002c4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BookExercises/CovnetVisualization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookExercises/CovnetFilterVisualization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookExercises/CovnetVisualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/BookExercises/CovnetVisualization.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +14,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BookExercises/CovnetVisualization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="56" column="84" lean-forward="true" selection-start-line="56" selection-start-column="84" selection-end-line="56" selection-end-column="84" />
+            <state>
+              <caret column="91" selection-start-column="91" selection-end-column="91" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BookExercises/CovnetFilterVisualization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+              <folding>
+                <element signature="e#73#109#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,6 +60,7 @@
         <option value="$PROJECT_DIR$/BookExercises/featureExtractNoAugmentation.py" />
         <option value="$PROJECT_DIR$/BookExercises/CNNCatsAndDogs.py" />
         <option value="$PROJECT_DIR$/BookExercises/CovnetVisualization.py" />
+        <option value="$PROJECT_DIR$/BookExercises/CovnetFilterVisualization.py" />
       </list>
     </option>
   </component>
@@ -61,6 +75,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -81,7 +96,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,14 +263,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548381525500</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="visualized the covnet">
+      <created>1549294087828</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1549294087828</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992928" visible="true" weight="0.15852048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992928" visible="true" weight="0.15852048" />
       <window_info id="Structure" order="1" sideWeight="0.5007072" side_tool="true" weight="0.15852048" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -267,7 +288,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.47100425" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4993395" weight="0.47100425" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -282,7 +303,8 @@
     <MESSAGE value="improved model using data augmentation and dropout layer" />
     <MESSAGE value="Using pretrained nn to classify images" />
     <MESSAGE value="Working with visualizing covnets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working with visualizing covnets" />
+    <MESSAGE value="visualized the covnet" />
+    <option name="LAST_COMMIT_MESSAGE" value="visualized the covnet" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Pipfile.lock">
@@ -361,10 +383,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BookExercises/CovnetVisualization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="56" column="84" lean-forward="true" selection-start-line="56" selection-start-column="84" selection-end-line="56" selection-end-column="84" />
+        <state>
+          <caret column="91" selection-start-column="91" selection-end-column="91" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookExercises/CovnetFilterVisualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding>
+            <element signature="e#73#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
