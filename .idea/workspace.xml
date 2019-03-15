@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89db754d-a053-4c82-aa17-c37edc002c4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BookExercises/WordEmbeddings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookMNIST/Network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookMNIST/Main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookMNIST/mnist_loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookMNIST/Network.py" beforeDir="false" afterPath="$PROJECT_DIR$/BookMNIST/Network.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,13 +15,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BookMNIST/Network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="65" column="85" selection-start-line="65" selection-start-column="85" selection-end-line="65" selection-end-column="85" />
+            <state relative-caret-position="2023">
+              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BookMNIST/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BookMNIST/mnist_loader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="77" column="12" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="12" />
+              <folding>
+                <element signature="e#348#361#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,6 +74,8 @@
         <option value="$PROJECT_DIR$/BookExercises/HeatmapVisualization.py" />
         <option value="$PROJECT_DIR$/BookExercises/WordEmbeddings.py" />
         <option value="$PROJECT_DIR$/BookMNIST/Network.py" />
+        <option value="$PROJECT_DIR$/BookMNIST/Main.py" />
+        <option value="$PROJECT_DIR$/BookMNIST/mnist_loader.py" />
       </list>
     </option>
   </component>
@@ -66,7 +90,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -87,6 +110,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550602698375</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="transitioned to the online book on building a network from scratch">
+      <created>1552569630598</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1552569630598</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -311,7 +342,8 @@
     <MESSAGE value="visualized the covnet" />
     <MESSAGE value="done with activations, now filters w/ gradient descent" />
     <MESSAGE value="visualized a heatmap over an example image" />
-    <option name="LAST_COMMIT_MESSAGE" value="visualized a heatmap over an example image" />
+    <MESSAGE value="transitioned to the online book on building a network from scratch" />
+    <option name="LAST_COMMIT_MESSAGE" value="transitioned to the online book on building a network from scratch" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Pipfile.lock">
@@ -430,11 +462,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BookMNIST/Network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="65" column="85" selection-start-line="65" selection-start-column="85" selection-end-line="65" selection-end-column="85" />
+        <state relative-caret-position="2023">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMNIST/mnist_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="77" column="12" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="12" />
+          <folding>
+            <element signature="e#348#361#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookMNIST/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
